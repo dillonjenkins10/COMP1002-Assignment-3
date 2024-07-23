@@ -1,0 +1,253 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* set fonts */
+h1, h2, h3, h4, h5, h6, figcaption{
+    font-family: "Arimo", sans-serif;
+    text-decoration: none;
+    color:#f8f8f8;
+    text-align: center;
+    font-weight: normal;
+}
+
+p, a, li{
+    font-family: "Barlow Condensed", sans-serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* header */
+header{
+    /* making it flex will put all the names next to eachother */
+    display: flex;
+    /* set background colour to the colour at the top of the poster */
+    background-color: #5b8d8c;
+    height: 100px;
+    width: auto;
+    margin: 0px;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+/* set text colour in the header */
+header > p{
+    color: #96cac6;
+    font-size: 20px;
+    margin: 0;
+    padding-top: 20px;
+}
+
+/* masthead */
+/*
+ * found a solution to fit the full image in the section using padding top here:
+ * https://stackoverflow.com/questions/600743/how-to-get-div-height-to-auto-adjust-to-background-size 
+ */
+.masthead{
+    margin: 0;
+    height: 0;
+    width: 100%;
+    padding-top: 150%;
+    background-image: url("../img/dune_poster_no_text.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* IT BEGINS */
+.masthead > h1{
+    font-size: 54px;
+    letter-spacing: 67px;
+    /* 
+     * fix I found on stack overflow: 
+     * https://stackoverflow.com/questions/4296530/ignore-parent-padding#:~:text=If%20you%20have%20a%20parent,margin%2Dbottom%3A%20%2D100px%3B&text=margin%3A%20%2D10px%3B,sucks%20content%20vertically%20into%20it.
+     */
+    margin-top: -660px;
+    margin-left: 5%;
+}
+
+/* poster credits section */
+.main-content{
+    margin: 0px;
+    background-color: #5f5034;
+}
+
+.releases{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* see it in theaters part */
+.releases > div{
+    justify-content: center;
+    border-right: solid 2px #acc7c0;
+    padding-right: 0.5%;
+}
+.releases > div > h2:nth-child(1){
+    color: #8c7b65;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.releases > div > h2:nth-child(2){
+    color: #acc7c0;
+    font-size: 36px;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+/* HBO Max */
+.releases > figure{
+    margin-top: 51px;
+    margin-left: -10px;
+}
+.releases > figure > figcaption{
+    color: #8c7b65;
+    margin-bottom: -50px;
+}
+.releases > figure > img{
+    height: 140px;
+    width: auto;
+}
+
+/* OCTOBER 22 */
+.main-content > h3{
+    font-size: 60px;
+    margin-top: -45px;
+    margin-bottom: 0;
+}
+
+/* poster credits */
+.credits > p{
+    color: #8c7b65;
+    font-size: 18px;
+    margin: 0;
+}
+
+.conjunction{
+    font-size: 12px;
+}
+
+/* I couldn't figure out how to get the text to stack like it is in the official poster */
+.moniker{
+    font-size: 8px;
+}
+
+/* logos at the bottom */
+.images{
+    display: flex;
+}
+
+.images > img{
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-top: 10px;
+}
+
+/* legendary */
+.images > img:nth-child(1){
+    height: 50px;
+    width: auto;
+    margin-left: 8%;
+}
+
+/* PG 13 */
+.images > img:nth-child(2){
+    height: 40px;
+    width: auto;
+    margin-right: 23%;
+}
+
+/* dolby */
+.images > img:nth-child(3){
+    height: 20px;
+    width: auto;
+}
+
+/* Real D */
+.images > img:nth-child(4){
+    height: 25px;
+    width: auto;
+}
+
+/* IMAX */
+.images > h4{
+    font-size: 8px;
+    padding-top: 10px
+}
+.images > img:nth-child(6){
+    height: 10px;
+    width: auto;
+    padding-top: 20px;
+    margin-right: 18%;
+}
+
+/* Water tower */
+.images > img:nth-child(7){
+    height: 20px;
+    width: auto;
+    padding-top: 20px;
+}
+
+/* warner bros. */
+.images > img:nth-child(8){
+    height: 30px;
+    width: auto;
+}
+
+.information > h5{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    color: #8c7b65;
+    margin-top: -20px;
+}
+
+.information > h6{
+    margin: 0;
+    padding: 0;
+    font-size: 5px;
+    color: #8c7b65;
+}
+
+.TM{
+    position: absolute;
+    font-size: 2px;
+}
+
+/* hacky solution but it works. */
+.space{
+    letter-spacing: 2px;
+}
+
+.information > h6 + h6{
+    padding-bottom: 60px;
+}
+
+/* footer with links */
+footer{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    background-color: #0e0e0e;
+    height: 100px;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > nav > menu{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+}
+
+footer > nav > menu > li{
+    padding: 20px;
+}
+
+footer > nav > menu > li > a{
+    font-size: 20px;
+    color: #f8f8f8;
+}
